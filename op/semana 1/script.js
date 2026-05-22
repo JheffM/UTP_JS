@@ -18,7 +18,7 @@ for(let i = 1; i <= 10; i++){
 
     }
 
-}
+} 
 let sumPares = document.getElementById("sumas");
 // Mostrar sumas
 sumPares.innerHTML += `<h3>Suma de pares: ${sumaPares}</h3>`;
