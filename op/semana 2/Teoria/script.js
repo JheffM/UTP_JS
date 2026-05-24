@@ -3,6 +3,11 @@
     console.log(Math.round(4.6)); //Redondea al numero mas cercano
     console.log(Math.ceil(4.2)); //Redondea al numero mayor
     console.log(Math.floor(4.8)); //Redondea al numero menor
+    //--------OPERACIONES ARITMETICAS
+    console.log(Math.add(5, 3));
+    console.log(Math.subtract(5, 3));
+    console.log(Math.multiply(5, 3));
+    console.log(Math.divide(5, 3));
     //--------EXPONENCIA Y RAIZ
     console.log(Math.pow(2, 3)); //Eleva el numero a la potencia indicada
     console.log(Math.sqrt(16)); //Raiz cuadrada
@@ -31,6 +36,9 @@
     console.log(Number.toFixed(Math.PI, 4)); //Salida: 3.1416
     Number.toString(123); //Convierte un numero a una cadena
     console.log(Number.toString(123)); //Salida: "123"
+    Number.reduce(5, 3); //Resta dos numeros
+    console.log(Number.reduce(5, 3)); //Salida: 2
+    
     //--------Verificaciones numericas
     Number.isNaN("abc"); //Verifica si el valor no es un numero
     console.log(Number.isNaN("abc")); //Salida: true
