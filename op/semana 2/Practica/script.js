@@ -1,5 +1,5 @@
 // Creacion de array con calificaciones
-var Calificaciones =[10.2,15.0,14.3,12.5,16.4,14.8,13.2,17.9,18.5,19.3];
+var Calificaciones =[10.2,15,14.3,12.5,16,14.8,13.2,17,18.5,19.3];
 document.getElementById("original-notas").innerHTML = Calificaciones;
 
 //Copia suoerficial de un array
@@ -22,15 +22,27 @@ document.getElementById("nota-promedio").innerHTML = calcularPromedio(Copia_cali
 
 
 //Verificar la cantidad de enteros
-var cantidad_enteros = 0;
-for (var i = 0; i < Copia_Calificaciones.length; i++) {
-    if (Number.isInteger(Copia_Calificaciones[i])) {
-        cantidad_enteros++; // Incrementa el contador si el elemento es un entero
+
+function verificarEnteros(array) {
+    var cantidad_enteros = 0;
+    for (var i = 0; i < Copia_calificaciones.length; i++) {
+        if (Number.isInteger(Copia_calificaciones[i])) {
+            cantidad_enteros++; // Incrementa el contador si el elemento es un entero
+        }
     }
+    return cantidad_enteros; // Retorna la cantidad de enteros encontrados
 }
-console.log("Cantidad de enteros: " + cantidad_enteros);
+
+
+document.getElementById("verificacion-resultados").innerHTML = verificarEnteros(Copia_calificaciones);
+console.log("Cantidad de enteros: " + verificarEnteros(Copia_calificaciones));
 
 //Generar un numero aleatorio entre 1 y 10 para ver que estudiante expondra
-    // Genera un numero aleatorio entre 1 y 10
-    var estudiante_expositor = Math.floor(Math.random() * 10) + 1; 
-    console.log("El estudiante que expondrá es el número: " + estudiante_expositor + " con la calificación: " + Calificaciones[estudiante_expositor - 1]);
+    // Genera un numero aleatorio entre 1 y 10 
+function generarNumeroAleatorio(min, max) {
+    let numero = Math.floor(Math.random() * (max - min + 1)) + min;
+    
+    document.getElementById("numero-aleatorio").innerHTML = numero;
+}
+
+
