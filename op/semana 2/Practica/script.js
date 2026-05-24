@@ -7,15 +7,19 @@ Copia_calificaciones = [...Calificaciones];
 document.getElementById("copia-notas").innerHTML = Copia_calificaciones;
 
 //Nota minima
+document.getElementById("nota-minima").innerHTML = Math.min(...Copia_calificaciones);
 console.log("Nota minima: " + Math.min(Copia_calificaciones));
 //Nota maxima
+document.getElementById("nota-maxima").innerHTML = Math.max(...Copia_calificaciones);
 console.log("Nota maxima: " + Math.max(Copia_calificaciones));
 //Promedio
-var suma = 0;  
-for (var i = 0; i < Copia_Calificaciones.length; i++) {
-    suma += Copia_Calificaciones[i]; // Suma cada elemento del array
+function calcularPromedio(array) {
+    let suma = array.reduce((acc, val) => acc + val, 0); // Suma todos los elementos del array
+    return suma / array.length; // Retorna el promedio
 }
-console.log("Promedio de Calificaciones: " + (suma / Copia_Calificaciones.length));
+
+document.getElementById("nota-promedio").innerHTML = calcularPromedio(Copia_calificaciones).toFixed(1); // Muestra el promedio con 2 decimales
+
 
 //Verificar la cantidad de enteros
 var cantidad_enteros = 0;

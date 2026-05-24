@@ -4,23 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notas de los estudiantes</title>
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
     <div class="title">
-        <h1>Notas de los estudiantes</h1>
+        <p class="title_text">Notas de los estudiantes</p>
     </div>
     <div class="content">
-        <div>
+        <div class="array">
             <p>Array original de las notas</p>
-            <div id="original-notas">
+            <div class="original_notas" id="original-notas">
                 <!-- Aquí se mostrarán las notas originales -->
             </div>
+        </div>
+        <div class="array">    
             <p>Array de las notas copiadas</p>
-            <div id="copia-notas">
+            <div class="copia_notas" id="copia-notas">
                 <!-- Aquí se mostrarán las notas copiadas -->   
             </div>
         </div>
-
+    </div>
+    <div class="content_resultado">
+        <div class="nota_minima">
+            <p class="resultado_text">Nota mínima</p>
+            <div class="resultado" id="nota-minima">
+                <!-- Aquí se mostrará la nota mínima -->
+            </div>
+        </div>
+        <div class="nota_maxima">
+            <p class="resultado_text">Nota máxima</p>
+            <div class="resultado" id="nota-maxima">
+                <!-- Aquí se mostrará la nota máxima -->
+            </div>
+        </div>
+        <div class="nota_promedio">
+            <p class="resultado_text">Nota promedio</p>
+            <div class="resultado" id="nota-promedio">
+                <!-- Aquí se mostrará la nota promedio -->
+            </div>
+        </div>
     </div>
     
     <script src="script.js"></script>
